@@ -1,3 +1,18 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2 id="title">Tap debug</h2>
+
+
+{{#x-tap}}
+  <button {{action "tapAction" target="view"}}>Action</button>
+  {{#x-tap}}
+    <button {{action "tapAction" target="view"}}>Action</button>
+    {{#x-tap}}
+      <button {{action "tapAction" target="view"}}>Action</button>
+      {{#x-tap}}
+        <button {{action 'tapAction' target="view"}}>Action</button>
+      {{/x-tap}}
+    {{/x-tap}}
+  {{/x-tap}}
+{{/x-tap}}
+
 
 {{outlet}}
