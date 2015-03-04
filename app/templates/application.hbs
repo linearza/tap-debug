@@ -2,13 +2,17 @@
 
 
 {{#x-tap}}
-  <button {{action "tapAction" target="view"}}>Action</button>
+  <button {{action "implicitTap" target="view"}}>Wrapped implicit action</button>
+  <button {{action "explicitTap" target="view" on="tap"}}>Wrapped explicit action</button>
   {{#x-tap}}
-    <button {{action "tapAction" target="view"}}>Action</button>
+    <button {{action "implicitTap" target="view"}}>Wrapped implicit action</button>
+    <button {{action "explicitTap" target="view" on="tap"}}>Wrapped explicit action</button>
     {{#x-tap}}
-      <button {{action "tapAction" target="view"}}>Action</button>
+      <button {{action "implicitTap" target="view"}}>Wrapped implicit action</button>
+      <button {{action "explicitTap" target="view" on="tap"}}>Wrapped explicit action</button>
       {{#x-tap}}
-        <button {{action 'tapAction' target="view"}}>Action</button>
+        <button {{action 'implicitTap' target="view"}}>Wrapped implicit action</button>
+        <button {{action "explicitTap" target="view" on="tap"}}>Wrapped explicit action</button>
       {{/x-tap}}
     {{/x-tap}}
   {{/x-tap}}

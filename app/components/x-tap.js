@@ -4,22 +4,20 @@ export default Ember.Component.extend({
   classNames: ['x-tap'],
 
   tap: function(){
-    console.log('tapped');
-    return false;
+    // console.log('Normal tap gesture is detected.');
+    // return false;
   },
-  // gestureAllow : ['tap'],
-
-  // gestureExclude : ['tap'],
 
   actions: {
-    tapAction: function() {
-      console.log('tapAction');
+
+    implicitTap: function() {
+      console.log('Action triggered by implicit/default tab gesture.');
     },
 
-    tapAction2: function() {
-      console.log('tapAction2');
-
+    explicitTap: function() {
+      console.log('Explicit tap gesture required to trigger action.');
     }
+    
   }
 
 });
